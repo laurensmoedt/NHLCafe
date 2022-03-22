@@ -1,0 +1,17 @@
+﻿@page
+@model NHLCafe.Pages.Delete
+
+@{
+    
+}
+<form method="post">
+    <div class="form-group">
+        <select class="form-control" name="productSelect"
+                asp-items="Model.products.Select(x => new SelectListItem() {Text = x.ProductName,Value = x.ProductId.ToString()})">
+        </select>
+        <button type="submit">Delete</button>
+    </div>
+</form>
+
+
+    

@@ -1,0 +1,94 @@
+﻿@page
+@using System.Net.Mime
+@using Microsoft.AspNetCore.Http
+@using NHLCafe.Pages.Helpers
+@model NHLCafe.Pages.Bestellen
+
+@{
+    
+}
+
+<div class="container">
+    <div class="row">
+        <h1 class="display-4">Bestellen</h1>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+            <div class="list-group">
+                @foreach (var category in Model.Categories)
+                {
+                    <div class="row">
+                        <button class="category-btn m-1 list-group-item list-group-item-action" value="@category.CategoryId">@category.Name</button>
+                    </div>
+                    
+                }
+            </div>
+        </div>
+        <div class="col-md-1 col-md-1 col-sm-2 col-xs-2"></div>
+        <div class="col-md-3 col-md-3 col-sm-6 col-xs-6">
+            @foreach (var product in Model.AllProducts)
+            {
+                <div class="row">
+                    <button class="list-group-item col-9 productCategory" style="display: none" value="@product.CategoryId">@product.ProductName</button>
+                    <form method="post" class="col-2">
+                        <button class="addProduct-btn list-group-item productCategory" style="display: none" asp-page-handler="AddProduct" value="@product.CategoryId">+
+                            <input type="hidden" name="productID" value="@product.ProductId"/>
+                        </button>
+                    </form>
+                </div>
+            }
+        </div>
+
+        <div class="col-md-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="col">
+                    <p><strong>Product</strong></p>
+                </div>
+                <div class="col">
+                    <p><strong>Hoeveelheid</strong></p>        
+                </div>
+            </div>
+            
+            @foreach (var productEntry in Model.SelectedProducts)
+            {
+                <div class="row listEntry">
+                    <div class="col-6 list-group addedProducts">
+                        <button class="list-group-item m-1 listProduct" value="@productEntry.ProductName">@productEntry.ProductName</button>
+                    </div>
+                    <div class="col-3 list-group addedCounter">
+                        <div class="row">
+                            <form class="col" method="post"><button asp-page-handler="Decrement" name="productID" value="@productEntry.ProductId" class="list-group-item btn-secondary minCounter">-</button></form>
+                            <input readonly type="text" class="col list-group-item counter" value="@HttpContext.Session.GetInt32("count"+productEntry.ProductId)"/>
+                            <form class="col" method="post"><button asp-page-handler="Increment" name="productID" value="@productEntry.ProductId" class="list-group-item btn-secondary plusCounter">+</button></form>
+                        </div>
+                    </div>
+                    <div class="col-1 list-group addedRemove">
+                        <form method="post"><button asp-page-handler="Remove" name="productID" value="@productEntry.ProductId" class="list-group-item btn-secondary deleteProduct">-</button></form>
+                    </div>
+                </div>
+            }
+            <a class="btn btn-primary float-end" asp-area="" asp-page="Overzicht">Bestel</a>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('.category-btn').on('click', function(){
+        $('.category-btn').removeClass('active');
+        $(this).addClass('active');
+        var categoryValue = $(this).val();
+        $('button.productCategory').hide();
+        $('button.productCategory').each(function ()
+        {
+            if ($(this).val() === categoryValue)
+            {
+                $(this).show();
+            }
+        })
+    });
+});
+</script>
+
+

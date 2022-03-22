@@ -1,0 +1,25 @@
+﻿@page
+@model NHLCafe.Pages.TableSelect
+
+@{
+    
+}
+
+<h1 class="display-4">Selecteer tafel</h1>
+
+<form method="post">
+    <div class="form-group">
+        <select class="form-control" name="SelectedTable"
+                asp-items="Model.Tables.Select(x => new SelectListItem() {Text = x,Value = x})">
+        </select>
+        <a class="btn btn-primary float-end m-1 Table">Bevestig</a>
+    </div>
+</form>
+
+<script>
+$(document).ready(function(){
+    $('.Table').on('click', function(){
+        alert("Bestelling bevestigd")
+    });
+});
+</script>

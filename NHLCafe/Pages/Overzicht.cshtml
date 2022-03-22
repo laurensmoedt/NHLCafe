@@ -1,0 +1,79 @@
+﻿@page
+@using System.Net.Mime
+@using Microsoft.AspNetCore.Http
+@using NHLCafe.Pages.Helpers
+@model NHLCafe.Pages.Overzicht
+
+@{
+}
+
+<h1 class="display-4">Overzicht</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <p><strong>Product</strong></p>
+        </div>
+        <div class="col-2">
+            <p><strong>Hoeveelheid</strong></p>         
+        </div>
+        <div class="col-3">
+            <p><strong>Prijs</strong></p>        
+        </div>
+        <div class="col-3">
+            <p><strong>Totaal</strong></p>            
+        </div>
+    </div> 
+    
+    @foreach (var productEntry in Model.SelectedProducts)
+    {
+        <div class="row listEntry">
+            <div class="col-4 list-group addedProducts">
+                <button class="list-group-item m-1 listProduct" value="@productEntry.ProductName">@productEntry.ProductName</button>
+            </div>
+                                                          
+            <div class="col-2 list-group addedCounter">
+                <div class="row">
+                    <form class="col-4" method="post"><button asp-page-handler="Decrement" name="productID" value="@productEntry.ProductId" class="list-group-item btn-secondary minCounter">-</button></form>
+                    <input readonly type="text" class="col-4 list-group-item counter" value="@HttpContext.Session.GetInt32("count"+productEntry.ProductId)"/>
+                    <form class="col-4" method="post"><button asp-page-handler="Increment" name="productID" value="@productEntry.ProductId" class="list-group-item btn-secondary plusCounter">+</button></form>
+                </div>
+            </div>
+            <div class="col-3 list-group">
+                <input readonly type="text" class="list-group-item price" value="@productEntry.Price"/>
+            </div>
+            <div class="col-3 list-group">
+                <input readonly type="text" class="list-group-item totalPrice" value=""/>
+            </div>
+        </div>
+    }
+    <div class="row">
+        <div class="col-9"></div>
+        <div class="col-3">
+            <input readonly type="text" class="list-group-item endTotalPrice" value=""/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9"></div>
+        <div class="col-3">
+            <a class="btn btn-primary float-end m-1" asp-area="" asp-page="AllesBetalen">Alles betalen</a>
+            <a class="btn btn-primary float-end m-1" asp-area="" asp-page="PerpersoonBetalen">Betalen per persoon</a>
+        </div>
+    </div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+    var endTotalPrice = 0;
+    $('.totalPrice').each(function ()
+    {
+        var total = parseFloat($(this).parent().parent().find('.price').val() * $(this).parent().parent().find('.counter').val()).toFixed(2);
+        $(this).val(total);
+        
+        endTotalPrice += parseFloat($(this).val());
+    })
+    $('.endTotalPrice').val(endTotalPrice.toFixed(2));
+});
+</script>
+

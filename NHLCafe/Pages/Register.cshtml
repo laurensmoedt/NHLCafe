@@ -1,0 +1,30 @@
+﻿@page
+@model NHLCafe.Pages.RegisterModel
+@{
+
+}
+<h1 class="display-4">Account Registreren</h1>
+
+<body>
+
+    @Model.Msg
+    <form method="post" asp-page="Register">
+        <table>
+            <tr>
+                <td>E-mail</td>
+                <td><input type="email" asp-for="@Model.Email" /></td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" asp-for="@Model.Username" /></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" asp-for="@Model.Password" /> <input type="password" asp-for="@Model.ConfirmPassword" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Registreer" /></td>
+            </tr>
+        </table>
+    </form>
+</body>

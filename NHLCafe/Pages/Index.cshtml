@@ -1,0 +1,44 @@
+﻿@page
+@using Microsoft.AspNetCore.Http
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container">
+    <div class="row">
+        <h1 class="display-4">Drankenkaart</h1>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            @foreach (var category in Model.Categories)
+            {
+                <h1 class="category">@category.Name</h1>
+                <ul class="list-group">
+                    @foreach (var product in Model.Products)
+                    {
+                        @if (product.Category.CategoryId == category.CategoryId)
+                        {
+                            <div class="row">
+                                <li class="list-group-item col">@product.ProductName</li>
+                                <li class="list-group-item col">@product.Description</li>
+                                <li class="list-group-item col">@product.Price</li>
+                            </div>
+                        }
+                    }
+                </ul>
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6">
+            @if (HttpContext.Session.GetString("ober") != null)
+            {
+                <a class="Create" asp-area="" asp-page="/Create">Add new product</a>
+                <a class="Create" asp-area="" asp-page="/Update">Update</a>
+                <a class="Create" asp-area="" asp-page="/Delete">Delete</a>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+﻿@page
+@model NHLCafe.Pages.Update
+
+@{
+    
+}
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+    var settings = {
+        validClass: "is-valid",
+        errorClass: "is-invalid"
+    };
+    $.validator.setDefaults(settings);
+    $.validator.unobtrusive.options = settings;
+    </script>
+}
+
+<form method="post">
+    
+    <div class="form-group">
+        
+        <div class="form-group">
+            <select class="form-control" asp-for="@Model.productSelect"
+                    asp-items="Model.products.Select(x => new SelectListItem() {Text = x.ProductName,Value = x.ProductId.ToString()})">
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>Naam</label>
+            <input asp-for="@Model.product.ProductName" class="form-control" placeholder="Naam">
+            <span class="invalid-feedback" asp-validation-for="product.ProductName"></span>
+        </div>
+        
+
+        <div class="form-group">
+            <label>Beschrijving</label>
+            <input asp-for="@Model.product.Description" class="form-control" placeholder="Beschrijving">
+            <span class="invalid-feedback" asp-validation-for="product.Description"></span>
+        </div>
+
+
+        <div class="form-group">
+            <label>Prijs</label>
+            <input asp-for="@Model.product.Price" class="form-control" placeholder="Prijs">
+            <span class="invalid-feedback" asp-validation-for="product.Price"></span>
+        </div>
+        
+        <div class="form-group">
+            <label>Category</label>
+            <select class="form-select" asp-for="product.CategoryId">
+                @foreach (var category in Model.categories)
+                {
+                    <option value="@category.CategoryId">@category.Name</option>
+                }
+            </select>
+        </div>
+        
+        <input type="submit" value="Update" />
+    </div>
+</form>

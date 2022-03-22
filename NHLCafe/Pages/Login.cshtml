@@ -1,0 +1,32 @@
+﻿@page
+@model NHLCafe.Pages.LoginModel
+@{
+
+}
+
+<h1 class="display-4">Log in met je gebruikersnaam en wachtwoord</h1>
+
+<body>
+
+    @Model.Msg
+    <form method="post" asp-page="Login">
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" asp-for="@Model.Username" placeholder="Enter Username"/></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" asp-for="@Model.Password" placeholder="Enter password"/></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Login" /></td>
+            </tr>
+            <tr>
+                <td>Nog geen account?</td>
+                <td><a asp-area="" asp-page="/Register">Registreren</a></td>
+            </tr>
+        </table>
+    </form>
+</body>
