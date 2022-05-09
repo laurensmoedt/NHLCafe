@@ -8,81 +8,81 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NHLCafe
 build_property.RootNamespace = NHLCafe
-build_property.ProjectDir = E:\School\NHL-ICT\Jaar-1\Periode-3\NHLCafe\NHLCafe\
+build_property.ProjectDir = D:\School\NHL-ICT\Jaar-1\Periode-3\NHLCafe\NHLCafe\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\School\NHL-ICT\Jaar-1\Periode-3\NHLCafe\NHLCafe
+build_property.MSBuildProjectDirectory = D:\School\NHL-ICT\Jaar-1\Periode-3\NHLCafe\NHLCafe
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/AccountOverview.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/AccountOverview.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudE92ZXJ2aWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/AllesBetalen.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/AllesBetalen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxsZXNCZXRhbGVuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Bestellen.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Bestellen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmVzdGVsbGVuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Create.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Delete.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Error.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Index.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Login.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Overzicht.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Overzicht.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3ZlcnppY2h0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/PerpersoonBetalen.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/PerpersoonBetalen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVycGVyc29vbkJldGFsZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Privacy.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Register.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/TableSelect.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/TableSelect.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFibGVTZWxlY3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Update.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/_ViewImports.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/_ViewStart.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Shared/_Layout.cshtml]
+[D:/School/NHL-ICT/Jaar-1/Periode-3/NHLCafe/NHLCafe/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-3dlrjj9b1g

@@ -14,14 +14,14 @@ namespace NHLCafe.Pages
         //     HttpMethod ="GET", //POST will not work, posting to the wrong page even with PageName set correct!
         //     PageHandler ="CheckProductName"
         // )]
-        [Required, MinLength(2), MaxLength(12)]
+        [Required] [MinLength(2)] [MaxLength(12)]
         public string ProductName { get; set; }
 
         [Required] [MaxLength(128)]
         public string Description { get; set; }
         
-        [Required, MaxLength(7)]
-        public decimal Price { get; set; }
+        [Required] [MaxLength(7)]
+        public string Price { get; set; }
 
         [Required]
         public int CategoryId { get; set; }
